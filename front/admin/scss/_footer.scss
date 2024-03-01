@@ -1,0 +1,27 @@
+footer.footer {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - #{$sidebar-collapsed-width});
+  height: $footer-height;
+  background-color: $gray-200;
+  .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+  @media (min-width: 768px) {
+    width: calc(100% - #{$sidebar-base-width});
+  }
+}
+
+body.sidebar-toggled {
+  footer.footer {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    footer.footer {
+      width: calc(100% - #{$sidebar-collapsed-width});
+    }
+  }
+}
